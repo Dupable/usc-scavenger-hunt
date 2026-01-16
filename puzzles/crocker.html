@@ -22,22 +22,43 @@
     body {
       font-family: 'Quicksand', sans-serif;
     }
+    /* Optional: space out the button nicely */
+    #copyButton {
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body class="d-flex align-items-center min-vh-100">
 
 <div class="container">
 
-<p>The code is:</p>
-<p>uggcf://qhcnoyr.tvguho.vb/hfp-fpniratre-uhag/chmmyrf/fbyhgvbaf/znxvat-uneq-pubvprf.ugzy</p>
+  <p>The code is:</p>
+  <p id="codeText">uggcf://qhcnoyr.tvguho.vb/hfp-fpniratre-uhag/chmmyrf/fbyhgvbaf/znxvat-uneq-pubvprf.ugzy</p>
 
-<br>
-<br>
-<p>Dec</p>
+  <button id="copyButton" class="btn btn-primary">Copy to Clipboard</button>
+
 </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  ></script>
+<script>
+  const button = document.getElementById('copyButton');
+  const codeText = document.getElementById('codeText');
+
+  button.addEventListener('click', () => {
+    // Use the modern Clipboard API
+    navigator.clipboard.writeText(codeText.textContent)
+      .then(() => {
+        button.textContent = 'Copied!';
+        setTimeout(() => button.textContent = 'Copy to Clipboard', 2000);
+      })
+      .catch(err => {
+        console.error('Failed to copy: ', err);
+        button.textContent = 'Failed';
+      });
+  });
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+></script>
 </body>
 </html>
