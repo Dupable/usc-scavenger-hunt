@@ -2,9 +2,8 @@ https://dupable.github.io/usc-scavenger-hunt/
 
 todo:
 
-finish crocker.html
 finish cpa.html
 finish pictures
 
 
-find viable rewards for pictures, cpa, and heaven. and annenberg.
+find viable rewards for pictures, cpa.
