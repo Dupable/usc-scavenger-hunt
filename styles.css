@@ -1,0 +1,79 @@
+/* =====================================================
+   Responsive CSS for Phones & Tablets
+   Mobile-first approach
+   ===================================================== */
+
+/* Base (phones by default) */
+html {
+  font-size: 16px;
+  background-color: #292929;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #292929;
+  color: rgb(240, 190, 190);
+}
+
+/* Make images and media responsive */
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal overflow */
+.container,
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Typography scaling */
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+p  { font-size: 1.5rem; line-height: 1.6; }
+
+/* Buttons & inputs easier to tap */
+button,
+.btn,
+input,
+select,
+textarea {
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+
+  .container,
+  .container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+}
+
+
+@media (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 1.75rem; }
+}
+
+
