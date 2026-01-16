@@ -1,3 +1,5 @@
+https://dupable.github.io/usc-scavenger-hunt/
+
 todo:
 
 finish crocker.html
